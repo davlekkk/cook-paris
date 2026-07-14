@@ -6,90 +6,99 @@ const ADDRESS = "27 Avenue Niel, 75017 Paris";
 
 const entrees = [
   { name: "Carpaccio de bœuf, émincé de champignons, sauce césar", price: "24€" },
-  { name: "Chiffonnade de charcuteries (dinde, saucisson sec, veau pressé)", price: "26€" },
-  { name: "Houmous bassar (viande hachée)", price: "19€" },
-  { name: "Piments padron", price: "17€" },
-  { name: "Salade de haricots verts et champignons (huile d'olive, balsamique)", price: "17€" },
-  { name: "Brick / mini", desc: "Thon, pomme de terre", price: "3€" },
+  { name: "Chiffonnade de charcuteries (dinde, saucisson sec, veau pressé)", price: "25€" },
+  { name: "Houmous bassar (viande hachée)", price: "18€" },
+  { name: "Nuggets de parguit (chapelure milanaise)", price: "20€" },
+  { name: "Piments padron", price: "16€" },
+  { name: "Carpaccio de tomates de Cynthia, ventrèche de thon, basilic", price: "22€" },
+  { name: "Anchois", price: "16€" },
+  { name: "Boîte de petites sardines, toasts", price: "16€" },
+  { name: "Haricots verts et champignons en salade (huile d'olive, balsamique)", price: "16€" },
+  { name: "Mini fricassé, brick ou pizza (l'unité)", price: "3€" },
 ];
 
 const salades = [
-  { name: "Salade césar poulet pané", desc: "Iceberg, tomates cerise, croûtons, poulet pané", price: "29€" },
-  { name: "Salade césar poulet grillé", desc: "Iceberg, tomates cerise, croûtons, poulet grillé", price: "29€" },
-  { name: "Salade niçoise", desc: "Iceberg, haricots verts, pomme de terre, thon, tomates, œuf dur, concombre, poivrons, endives, olives", price: "29€" },
-  { name: "Salade de foies de volaille", desc: "Iceberg, endives, tomates cerise, foies de volaille, œuf poché, balsamique", price: "29€" },
-  { name: "Salade paysanne", desc: "Iceberg, tomates cerise, dés de dinde et poitrine de veau, œuf poché, balsamique", price: "29€" },
-  { name: "Assiette tunisienne", desc: "Méchouia, pomme de terre, thon, œuf poché, harissa, olives, poivrons, câpres, citron confit, piment doux", price: "29€" },
+  { name: "Salade césar", desc: "Iceberg, tomates cerise, croûtons, poulet pané ou grillé", price: "28€" },
+  { name: "Salade chinoise", desc: "Soja, émincé de carottes et concombre, poulet cuit à la vapeur", price: "28€" },
+  { name: "Salade de foies de volaille", desc: "Iceberg, endives, tomates cerise, foies de volaille, œuf poché, balsamique", price: "28€" },
+  { name: "Salade paysanne", desc: "Iceberg, tomates cerise, dés de dinde et poitrine de veau, œuf poché, balsamique", price: "28€" },
+  { name: "Salade niçoise", desc: "Iceberg, haricots verts, pomme de terre, thon, tomates, œuf dur, concombre, poivrons, endives, olives", price: "28€" },
+  { name: "Assiette tunisienne", desc: "Méchouia, pomme de terre, thon, œuf poché, harissa, olives, poivrons, câpres, citron confit, piment doux", price: "28€" },
 ];
 
 const pates = [
-  { name: "Spaghettis merguez", price: "29€" },
-  { name: "Spaghettis bolognaise", price: "29€" },
-  { name: "Penne au thon et aux olives", price: "29€" },
-  { name: "Penne à la tomate", price: "21€" },
+  { name: "Spaghettis merguez", price: "28€" },
+  { name: "Spaghettis bolognaise", price: "28€" },
+  { name: "Penne au thon et aux olives", price: "24€" },
+  { name: "Penne à la tomate", price: "20€" },
 ];
 
 const petitsPlats = [
-  { name: "Croque-monsieur", desc: "Pain toasté, mayo, dinde, cheese", price: "27€" },
-  { name: "Saucisse, œuf au plat", price: "29€" },
-  { name: "Omelette garnie", desc: "Frites ou salade au choix", price: "20€" },
-  { name: "Œufs au plat garnis", desc: "Frites ou salade au choix", price: "20€" },
+  { name: "Cordon bleu", price: "29€" },
+  { name: "Croque Jordan « croque-monsieur » (avec ou sans œuf)", price: "26€" },
+  { name: "Saucisse, œuf au plat", price: "28€" },
+  { name: "Omelette", price: "20€" },
+  { name: "Œufs au plat", price: "20€" },
+  { name: "Œufs brouillés", price: "20€" },
 ];
 
 const burgers = [
-  { name: "Hamburger", desc: "Salade, tomates, oignons, cornichons, sauce tartare (servi à part)", price: "29€" },
-  { name: "Cheeseburger", desc: "Salade, tomates, oignons, cornichons, sauce tartare (servi à part)", price: "29,50€" },
-  { name: "Chicken burger", desc: "Salade, tomates, oignons, cornichons, sauce tartare (servi à part)", price: "29€" },
+  { name: "Hamburger", price: "28€" },
+  { name: "Cheeseburger", price: "29€" },
+  { name: "Chicken burger", price: "28€" },
+  { name: "Lippi chicken burger « milanaise » (supp. cheese 1€)", price: "28€" },
+  { name: "Fish burger (supp. cheese 1€)", price: "28€" },
 ];
 
 const viandes = [
-  { name: "Escalope milanaise", desc: "Poulet, chapelure maison assaisonnée", price: "29€" },
-  { name: "Escalope 138 de poulet (schnitzel)", desc: "Panée, chapelure nature", price: "29€" },
-  { name: "Escalope de poulet grillée", price: "29€" },
-  { name: "Parguit", desc: "Cuisses de poulet marinées et grillées", price: "31€" },
-  { name: "Demi poulet", price: "31€" },
-  { name: "Cordon bleu", desc: "Poulet, veau pressé, cheese", price: "29€" },
-  { name: "Merguez", price: "29€" },
-  { name: "Steak tartare", desc: "Déjà assaisonné", price: "31€" },
-  { name: "Saumon grillé", price: "36€" },
+  { name: "Escalope milanaise", desc: "Poulet, chapelure maison", price: "28€" },
+  { name: "Escalope de poulet 158 (schnitzel)", price: "28€" },
+  { name: "Escalope de poulet grillée", price: "28€" },
+  { name: "Parguit", price: "30€" },
+  { name: "Demi poulet rôti", price: "30€" },
+  { name: "Merguez", price: "28€" },
+  { name: "Gros steak haché, œuf à cheval ou pas", price: "28€" },
+  { name: "Steak tartare", price: "30€" },
+  { name: "Entrecôte", price: "40€" },
+  { name: "Noix d'entrecôte", price: "44€" },
+  { name: "Côte d'agneau (4 pièces)", price: "41€" },
+  { name: "Plat du jour", price: "28€" },
+];
+
+const poissons = [
+  { name: "Tartare de saumon", price: "30€" },
+  { name: "Pavé de saumon", price: "36€" },
+  { name: "Milanaise de thon, roquette, tomates", price: "40€" },
+  { name: "Steak de thon", price: "36€" },
+  { name: "Complét poisson", price: "+ 5€" },
+];
+
+const garnitures = [
+  { name: "Frites", price: "" },
+  { name: "Spaghettis sauce tomate", price: "" },
+  { name: "Salade verte", price: "" },
+  { name: "Endives", price: "" },
+  { name: "Haricots verts sautés ou vapeur", price: "" },
+  { name: "Riz blanc", price: "" },
 ];
 
 const supplements = [
-  { name: "Frites", price: "8€" },
-  { name: "Spaghetti sauce tomate", price: "8€" },
-  { name: "Salade", price: "7€" },
-  { name: "Endives", price: "7€" },
-  { name: "Riz", price: "8€" },
-  { name: "Supplément bacon", price: "9€" },
-  { name: "Supplément merguez (2 pièces)", price: "12€" },
+  { name: "Bacon", price: "9€" },
+  { name: "Garniture", price: "8€" },
+  { name: "Steak haché", price: "12€" },
+  { name: "Merguez (2 pièces)", price: "12€" },
+  { name: "Saucisse (1 pièce)", price: "8€" },
+  { name: "Cheese", price: "2€" },
 ];
 
-const sauces = [
-  { name: "Sauce chinoise", price: "2€" },
-  { name: "Sauce blanche", price: "2€" },
-  { name: "Sauce tartare", price: "2€" },
-  { name: "Sauce huile d'olive balsamique", price: "2€" },
-  { name: "Sauce niçoise", price: "2€" },
-  { name: "Sauce paysanne", price: "2€" },
-  { name: "Sauce foies de volaille", price: "2€" },
-];
-
-const softs = [
-  { name: "Coca-Cola 33cl", price: "3€" },
-  { name: "Coca-Cola zero sucres 33cl", price: "3€" },
-  { name: "Sprite 33cl", price: "3€" },
-  { name: "Fanta orange 33cl", price: "3€" },
-  { name: "Orangina 33cl", price: "3€" },
-  { name: "Ice Tea 33cl", price: "3€" },
-  { name: "Oasis tropical", price: "3€" },
-  { name: "Evian 50cl", price: "3€" },
-  { name: "San Pellegrino 50cl", price: "4€" },
-];
-
-const alcools = [
+const boissons = [
+  { name: "Sodas 33cl", price: "4€" },
+  { name: "Eau minérale 50cl", price: "4€" },
+  { name: "Eau gazeuse 50cl", price: "4€" },
+  { name: "Thé, menthe fraîche", price: "5€" },
+  { name: "Expresso", price: "3,50€" },
+  { name: "Double expresso", price: "5€" },
   { name: "Bière 33cl", price: "5€" },
-  { name: "Vin rouge 75cl", price: "28€" },
-  { name: "Vin rosé 75cl", price: "28€" },
 ];
 
 const platsPhotos = [
@@ -194,8 +203,8 @@ export default function App() {
       <section className="border-y border-gray-200" style={{ backgroundColor: '#F5F0E8' }}>
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-3 lg:px-8">
           <div className="text-center lg:text-left">
-            <p className="font-serif text-3xl font-bold">4.7/5</p>
-            <p className="text-sm text-gray-500 mt-1">Excellent sur Deliveroo (500+ avis)</p>
+            <p className="font-serif text-3xl font-bold">92 j'aime</p>
+            <p className="text-sm text-gray-500 mt-1">Sur Instagram — @cook_restaurant_paris</p>
           </div>
           <div className="text-center lg:text-left">
             <p className="font-serif text-3xl font-bold">Cuisine casher</p>
@@ -232,28 +241,43 @@ export default function App() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
           <div className="mb-10 text-center">
             <h2 className="font-serif text-4xl font-bold sm:text-5xl">La carte</h2>
-            <p className="mt-3 text-lg text-gray-500">Prix de livraison Deliveroo</p>
+            <p className="mt-3 text-lg text-gray-500">Tous nos plats sont accompagnés d'une garniture au choix</p>
           </div>
+
+          {/* Entrées + Salades */}
           <div className="grid gap-10 lg:grid-cols-2 mb-12">
             <MenuSection title="Entrées">{entrees.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
             <MenuSection title="Salades">{salades.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
           </div>
+
+          {/* Pâtes + Petits plats */}
           <div className="grid gap-10 lg:grid-cols-2 mb-12">
             <MenuSection title="Pâtes">{pates.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
-            <MenuSection title="Petites faim">{petitsPlats.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
+            <MenuSection title="Les petits plats">{petitsPlats.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
           </div>
+
+          {/* Burgers + Viandes */}
           <div className="grid gap-10 lg:grid-cols-2 mb-12">
-            <MenuSection title="Burgers">{burgers.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
-            <MenuSection title="Viandes & Poissons">{viandes.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
+            <MenuSection title="Les burgers">{burgers.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
+            <MenuSection title="Les viandes">{viandes.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
           </div>
+
+          {/* Poissons + Garnitures/Suppléments */}
           <div className="grid gap-10 lg:grid-cols-2 mb-12">
-            <MenuSection title="Suppléments & Garnitures">{supplements.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
-            <MenuSection title="Sauces">{sauces.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
+            <MenuSection title="Les poissons">
+              {poissons.map((item) => <MenuItem key={item.name} {...item} />)}
+            </MenuSection>
+            <div className="grid gap-8">
+              <MenuSection title="Les garnitures">{garnitures.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
+              <MenuSection title="Les suppléments">{supplements.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
+            </div>
           </div>
-          <div className="grid gap-10 lg:grid-cols-2">
-            <MenuSection title="Softs">{softs.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
-            <MenuSection title="Alcools">{alcools.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
+
+          {/* Boissons */}
+          <div className="lg:max-w-md">
+            <MenuSection title="Les boissons">{boissons.map((item) => <MenuItem key={item.name} {...item} />)}</MenuSection>
           </div>
+
           <p className="mt-8 text-sm text-gray-500 italic">Provenance des viandes : France</p>
         </div>
       </section>
